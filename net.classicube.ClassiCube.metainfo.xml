@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>net.classicube.ClassiCube</id>
+  <launchable type="desktop-id">net.classicube.ClassiCube.desktop</launchable>
+  
+  <name>ClassiCube</name>
+  <summary>An exceedingly simple sandbox building-block game</summary>
+  
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-3-Clause</project_license>
+  
+  <description>
+    <p>A sandbox block game inspired by other such sandbox block games, ClassiCube brings you back to the days of 2009 where one block game ruled them all.</p>
+    <p>ClassiCube includes such features as...</p>
+    <ul>
+      <li>Rendering Quads</li>
+      <li>Allow the user to change which quads render</li>
+      <li>Placing Blocks</li>
+      <li>Deleting Blocks</li>
+      <li>Chatting with other players</li>
+      <li>An extremely simple network protocol to tinker with</li>
+      <li>Hundreds of creative and inventive worlds to explore online</li>
+      <li>A growing community</li>
+      <li>Hundreds of hours of entertainment</li>
+    </ul>
+  </description>
+  
+  <url type="homepage">https://www.classicube.net/</url>
+  <url type="bugtracker">https://github.com/UnknownShadow200/ClassiCube/issues</url>
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.cloudflare.steamstatic.com/steam/apps/1065710/ss_5659df44225ab96f739b628ba97705aedba3166c.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://cdn.cloudflare.steamstatic.com/steam/apps/1065710/ss_4caa85adc1577e650038f5dc490b946868ba22c6.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://cdn.cloudflare.steamstatic.com/steam/apps/1065710/ss_06a6f6ca71eddd0b785b9858c17964d55a5fe376.jpg</image>
+    </screenshot>
+  </screenshots>
+</component>

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=ClassiCube
+Exec=ClassiCubeLauncher.sh
+Comment=An exceedingly simple sandbox building-block game.
+Type=Application
+Icon=net.classicube.ClassiCube
+Categories=Game

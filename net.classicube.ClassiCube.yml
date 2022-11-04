@@ -1,0 +1,46 @@
+app-id: net.classicube.ClassiCube
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: ClassiCubeLauncher.sh
+finish-args:
+  - --socket=x11
+  - --device=dri
+  - --share=network
+  - --share=ipc
+  - --socket=pulseaudio
+  - --filesystem=/usr/share/fonts:ro
+  - --filesystem=/usr/local/share/fonts:ro
+modules:
+  - name: ClassiCube
+    buildsystem: simple
+    build-commands:
+      - gcc src/*.c -o src/ClassiCube -DCC_BUILD_FLATPAK -rdynamic -lm -lpthread -lX11 -lXi -lGL -ldl
+      - install -Dm755 src/ClassiCube -t ${FLATPAK_DEST}/bin
+      - install -Dm755 ClassiCubeLauncher.sh -t ${FLATPAK_DEST}/bin
+      - install -Dm644 default.zip ${FLATPAK_DEST}/share/ClassiCubeTexPack.zip
+      - install -Dm644 CCicon128.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/net.classicube.ClassiCube.png
+      - install -Dm644 net.classicube.ClassiCube.desktop ${FLATPAK_DEST}/share/applications/net.classicube.ClassiCube.desktop
+      - install -Dm644 net.classicube.ClassiCube.metainfo.xml ${FLATPAK_DEST}/share/metainfo/net.classicube.ClassiCube.metainfo.xml
+    sources:
+      - type: git
+        url: https://github.com/abb128/ClassiCube
+        branch: flatpak
+      - type: script
+        dest-filename: ClassiCubeLauncher.sh
+        commands:
+         # Copy default texture pack to texpacks directory if not exists
+         - mkdir -p ${XDG_DATA_HOME}/ClassiCube/texpacks
+         - test -f ${XDG_DATA_HOME}/ClassiCube/texpacks/default.zip || cp /app/share/ClassiCubeTexPack.zip ${XDG_DATA_HOME}/ClassiCube/texpacks/default.zip
+         # Launch the game from its data directory
+         - cd ${XDG_DATA_HOME}/ClassiCube && exec /app/bin/ClassiCube "$@"
+      - type: file
+        path: CCicon128.png
+      - type: file
+        path: net.classicube.ClassiCube.desktop
+      - type: file
+        path: net.classicube.ClassiCube.metainfo.xml
+      - type: file
+        dest-filename: default.zip
+        url: https://classicube.net/static/default.zip
+        sha256: c698ade59a53b4fb61a5a24f00629ee5fc9f19f18cfce152e1783461ed41d7c1

@@ -24,8 +24,8 @@ modules:
       - install -Dm644 net.classicube.ClassiCube.metainfo.xml ${FLATPAK_DEST}/share/metainfo/net.classicube.ClassiCube.metainfo.xml
     sources:
       - type: git
-        url: https://github.com/abb128/ClassiCube
-        branch: flatpak
+        url: https://github.com/UnknownShadow200/ClassiCube
+        branch: master
       - type: script
         dest-filename: ClassiCubeLauncher.sh
         commands:

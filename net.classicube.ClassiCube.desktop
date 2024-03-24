@@ -1,7 +1,10 @@
 [Desktop Entry]
 Name=ClassiCube
-Exec=ClassiCubeLauncher.sh
-Comment=An exceedingly simple sandbox building-block game.
+Exec=ClassiCubeLauncher
+Comment=Sandbox building-block game
 Type=Application
 Icon=net.classicube.ClassiCube
-Categories=Game
+Categories=Game;ActionGame;
+Terminal=false
+MimeType=x-scheme-handler/mc;
+StartupWMClass=net.classicube.ClassiCube

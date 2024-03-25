@@ -52,3 +52,9 @@ flatpak build-bundle repo net.classicube.ClassiCube.flatpak net.classicube.Class
 ```
 
 Note that you can call this bundle anything, but the last part ***has to be*** `net.classicube.ClassiCube`.
+
+3. Final step, installing the bundle.
+```bash
+flatpak install --user net.classicube.ClassiCube.flatpak
+```
+I would recommend installing as user so you don't have to keep entering your password when testing and uninstalling builds, if you have a different name for your bundle, change it accordingly in this command.

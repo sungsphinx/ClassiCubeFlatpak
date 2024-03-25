@@ -9,10 +9,10 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
   <description>
-    <p>A sandbox block game inspired by other sandbox block games, ClassiCube brings you back to the days of 2009 where one block game ruled them all.</p>
+    <p>ClassiCube brings you back to the days of 2009 where one block game ruled them all.</p>
     <p>ClassiCube includes such features as:</p>
     <ul>
-      <li>Deleting Blocks</li>
+      <li>Loads of blocks and items to choose from</li>
       <li>Chatting with other players</li>
       <li>An extremely simple network protocol to tinker with</li>
       <li>Hundreds of creative and inventive worlds to explore online</li>

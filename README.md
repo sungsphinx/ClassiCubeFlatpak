@@ -40,7 +40,7 @@ Ready? Let's start.
 1. We will need to start the build and all that good stuff, this will require a internet connection.
 
 ```bash
-flatpak run org.flatpak.Builder --install-deps-from=flathub --repo=repo --force-clean build-dir net.classicube.ClassiCube
+flatpak run org.flatpak.Builder --install-deps-from=flathub --repo=repo --force-clean build-dir net.classicube.ClassiCube.yml
 ```
 
 If you don't have the required dependencies installed, this should install them automatically.

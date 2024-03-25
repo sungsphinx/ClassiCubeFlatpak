@@ -16,7 +16,7 @@ modules:
       - gcc src/*.c -o src/ClassiCube -O1 -DCC_BUILD_FLATPAK -DCC_BUILD_ICON -rdynamic -lm -lpthread -lX11 -lXi -lGL -ldl
       - install -Dm755 src/ClassiCube -t ${FLATPAK_DEST}/bin
       - install -Dm755 ClassiCubeLauncher -t ${FLATPAK_DEST}/bin
-      - install -Dm644 net.classicube.ClassiCube.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/net.classicube.ClassiCube.png
+      - install -Dm644 net.classicube.ClassiCube.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/net.classicube.ClassiCube.svg
       - install -Dm644 net.classicube.ClassiCube.desktop ${FLATPAK_DEST}/share/applications/net.classicube.ClassiCube.desktop
       - install -Dm644 net.classicube.ClassiCube.metainfo.xml ${FLATPAK_DEST}/share/metainfo/net.classicube.ClassiCube.metainfo.xml
     sources:
@@ -29,7 +29,7 @@ modules:
          - mkdir -p ${XDG_DATA_HOME}/ClassiCube
          - cd ${XDG_DATA_HOME}/ClassiCube && exec /app/bin/ClassiCube "$@"
       - type: file
-        path: net.classicube.ClassiCube.png
+        path: net.classicube.ClassiCube.svg
       - type: file
         path: net.classicube.ClassiCube.desktop
       - type: file

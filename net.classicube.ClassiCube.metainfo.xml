@@ -9,8 +9,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
   <description>
-    <p>ClassiCube brings you back to the days of 2009 where one block game ruled them all.</p>
-    <p>ClassiCube includes such features as:</p>
+    <p>ClassiCube brings you back to the days of 2009 where one block game ruled them all, it includes such features as:</p>
     <ul>
       <li>Loads of blocks and items to choose from</li>
       <li>Chatting with other players</li>
@@ -26,7 +25,7 @@
       <image type="source">https://github.com/ClassiCube/actions-testing-cc/assets/7892772/a233cb4c-296a-4d08-87fc-49874c230d4f</image>
     </screenshot>
     <screenshot>
-      <caption>Enhanced mode allows servers to provide many custom features</caption>
+      <caption>Enhanced mode allows hacks like flying and noclipping, it also allows servers to provide many custom features</caption>
       <image type="source">https://github.com/ClassiCube/actions-testing-cc/assets/7892772/61a064bd-cfaa-4a91-bedf-a16c3dd7e8a2</image>
     </screenshot>
   </screenshots>

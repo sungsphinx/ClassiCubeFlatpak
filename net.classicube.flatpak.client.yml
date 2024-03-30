@@ -1,4 +1,4 @@
-id: net.classicube.ClassiCube
+id: net.classicube.flatpak.client
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
@@ -13,12 +13,12 @@ modules:
   - name: ClassiCube
     buildsystem: simple
     build-commands:
-      - gcc src/*.c -o src/ClassiCube -O1 -DCC_BUILD_FLATPAK -DCC_BUILD_ICON -rdynamic -lm -lpthread -lX11 -lXi -lGL -ldl
+      - gcc src/*.c -o src/ClassiCube -O1 -DCC_BUILD_FLATPAK -rdynamic -lm -lpthread -lX11 -lXi -lGL -ldl
       - install -Dm755 src/ClassiCube -t ${FLATPAK_DEST}/bin
       - install -Dm755 ClassiCubeLauncher -t ${FLATPAK_DEST}/bin
-      - install -Dm644 net.classicube.ClassiCube.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/net.classicube.ClassiCube.svg
-      - install -Dm644 net.classicube.ClassiCube.desktop ${FLATPAK_DEST}/share/applications/net.classicube.ClassiCube.desktop
-      - install -Dm644 net.classicube.ClassiCube.metainfo.xml ${FLATPAK_DEST}/share/metainfo/net.classicube.ClassiCube.metainfo.xml
+      - install -Dm644 net.classicube.flatpak.client.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/net.classicube.flatpak.client.svg
+      - install -Dm644 net.classicube.flatpak.client.desktop ${FLATPAK_DEST}/share/applications/net.classicube.flatpak.client.desktop
+      - install -Dm644 net.classicube.flatpak.client.metainfo.xml ${FLATPAK_DEST}/share/metainfo/net.classicube.flatpak.client.metainfo.xml
     sources:
       - type: git
         url: https://github.com/sungsphinx/ClassiCube.git
@@ -29,8 +29,8 @@ modules:
          - mkdir -p ${XDG_DATA_HOME}/ClassiCube
          - cd ${XDG_DATA_HOME}/ClassiCube && exec /app/bin/ClassiCube "$@"
       - type: file
-        path: net.classicube.ClassiCube.svg
+        path: net.classicube.flatpak.client.svg
       - type: file
-        path: net.classicube.ClassiCube.desktop
+        path: net.classicube.flatpak.client.desktop
       - type: file
-        path: net.classicube.ClassiCube.metainfo.xml
+        path: net.classicube.flatpak.client.metainfo.xml

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <component type="desktop-application">
-  <id>net.classicube.ClassiCube</id>
+  <id>net.classicube.flatpak.client</id>
   <name>ClassiCube</name>
   <summary>Sandbox building-block game</summary>
   <developer id="net.classicube">
@@ -141,7 +141,7 @@
     <content_attribute id="violence-cartoon">moderate</content_attribute>
     <content_attribute id="social-chat">intense</content_attribute>
   </content_rating>
-  <launchable type="desktop-id">net.classicube.ClassiCube.desktop</launchable>
+  <launchable type="desktop-id">net.classicube.flatpak.client.desktop</launchable>
   <provides>
     <binary>ClassiCube</binary>
   </provides>
